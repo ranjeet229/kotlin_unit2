@@ -15,6 +15,12 @@
         android:theme="@style/Theme.Sem6_pratice"
         tools:targetApi="31">
         <activity
+            android:name=".Notification.Notification_firistactivity"
+            android:exported="false" />
+        <activity
+            android:name=".AlarmManger.DestinationActivity"
+            android:exported="false" />
+        <activity
             android:name=".Intent.Implicit_Intent"
             android:exported="false" />
         <activity
@@ -30,14 +36,16 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".Notification.Notification_firistactivity"
+            android:name=".AlarmManger.alarm_firstPage"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity> <!-- for alarm manager .......>>> -->
+        <receiver android:name=".AlarmManger.AlarmReceiver" />
+
     </application>
 
 </manifest>
